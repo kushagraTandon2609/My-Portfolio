@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Kushagra Tandon</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/Aboutme.css">
+    <link rel="stylesheet" href="styles/language-switcher.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      .skills-grid li {
+        background-color: #00f214;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-weight: 500;
+        list-style: none;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .skills-grid li:hover {
+        transform: scale(1.05);
+        background-color: #238d33;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar">
+            <a href="index.html" class="nav-brand">PORTFOLIO</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" class="nav-link" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="Certifications.html" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+            <li><a href="Aboutme.html" class="nav-link active" data-en="About Me" data-fr="À Propos">About Me</a></li>
+            <li><a href="Contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <button class="sidebar-toggle" aria-label="Toggle sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="page-container">
+        <!-- Desktop sidebar navigation -->
+        <div class="sidebar">
+            <div class="nav-item active" data-section="education" data-en="Education">Education</div>
+            <div class="nav-item" data-section="skills" data-en="Skills">Skills</div>
+        </div>
+
+        <!-- Mobile tab navigation -->
+        <div class="mobile-tabs">
+            <div class="mobile-tab active" data-section="education" data-en="Education">Education</div>
+            <div class="mobile-tab" data-section="skills" data-en="Skills">Skills</div>
+        </div>
+
+        <main class="main-content">
+            <section id="education" class="content-section active">
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="year">2011-2022</div>
+                        <h2 data-en="School">Schooling</h2>
+                        <div class="location">
+                            <i data-lucide="map-pin"></i><br>
+                            <br>
+                            <span data-en="Dr. Virendra Swarup Education Centre, Kanpur, UttarPradesh">Dr. Virendra Swarup Education Centre, Kanpur, UttarPradesh</span>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="year">2022-2026</div>
+                        <h2 data-en="Engineering Cycle">Engineering Cycle</h2>
+                        <div class="location">
+                            <i data-lucide="map-pin"></i>
+                            <br>
+                            <br>    
+                            <span data-en="Pranveer Singh Institute Of Technology, Kanpur">Pranveer Singh Institute Of Technology, Kanpur</span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="content-section">
+                <div class="skills-grid">
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>JavaScript</li> 
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MySQL</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Bootstrap</li>
+                        <li>UI/UX</li>
+                        <li>Problem Solving</li>
+                        <li>Data Structures</li>
+                        <li>Algorithms</li>
+                        <li>Machine Learning</li>
+                        <li>Tableau</li>
+                        <li>Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts/Aboutme.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

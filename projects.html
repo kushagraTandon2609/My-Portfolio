@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Kushagra Tandon</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="styles/language-switcher.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar">
+            <a href="index.html" class="nav-brand">PORTFOLIO</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link" data-en="Home" data-fr="Accueil">Home</a></li>
+            <li><a href="projects.html" class="nav-link active" data-en="Projects" data-fr="Projets">Projects</a></li>
+            <li><a href="Certifications.html" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+            <li><a href="Aboutme.html" class="nav-link" data-en="About Me" data-fr="À Propos">About Me</a></li>
+            <li><a href="Contact.html" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <h1 class="page-title" data-aos="fade-down" data-aos-delay="100" data-en="My Projects" data-fr="Mes Projets">My Projects</h1>
+        
+        <div class="projects-container">
+            <div class="projects-track">
+                <!-- Project 1: Emotion-Based-Music-Recommendation-System -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header" onclick="toggleDetails(this)">
+                        <div class="project-preview">
+                            <h2 class="project-title" data-en="Emotion Based Music Recommendation System">
+                                    EMOFI
+                                </h2>
+                            <div class="project-image-wrapper">
+                                <img src="images/photo3.png" alt="Emotion-Based-Music-Recommendation-System" class="project-image">
+                            </div>
+                            <div class="project-intro">
+                                <a href="https://github.com/kushagraTandon2609/EMOFI-" class="github-link" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <span class="project-technologies">
+                                    <i class="fas fa-tools"></i>
+                                    Utilized Python libraries including OpenCV, cv2, Streamlit, Mediapipe, NumPy, Matplotlib, and Keras for emotion detection and music recommendation.
+                                </span>
+                                <span class="project-technologies">
+                                    <i class="fas fa-tools"></i>
+                                    I developed a music recommendation system that uses face recognition to detect human emotions in real time. By leveraging Python libraries such as OpenCV, cv2, Streamlit, Mediapipe, NumPy, Matplotlib, and Keras, the system accurately identifies emotional states through facial expressions. Based on the detected emotion, it integrates with the YouTube API to automatically fetch and recommend suitable songs, offering a personalized and mood-based music experience.
+                                </span>
+                                <span class="project-date">
+                                    
+                                    <span class="date-range" data-en="August 2023 - July 2024">August 2023 - July 2024</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: My Portfolio -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header" onclick="toggleDetails(this)">
+                        <div class="project-preview">
+                            <h2 class="project-title" data-en="My Portfolio">
+                                    My Portfolio
+                                </h2>
+                            <div class="project-image-wrapper">
+                                <img src="images/photo6.png" alt="My Portfolio" class="project-image">
+                            </div>
+                            <div class="project-intro">
+                                <a href="" class="github-link" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a><br>
+                                <span class="project-technologies">
+                                    <br>HTML, CSS, JavaScript, Font Awesome, Bootstrap, Animate On Scroll, GithubPages
+                                </span>
+                                <span class="project-technologies">
+                                    <i class="fas fa-tools"></i>
+                                    I developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my projects, skills, and academic background. The website features a clean, responsive design with interactive elements to ensure a smooth user experience across devices. It serves as a central platform to highlight my work in web development and allows visitors to explore my technical journey, making it easier for recruiters and collaborators to connect with me.
+                                </span>
+                                <span class="project-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="date-range" data-en="September 2024 - January 2025" >September 2024 - January 2025</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: CRYPTOVAULT: A SECURE NOTES APP WITH BLOCKCHAIN AND AES-256 ENCRYPTION -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header" onclick="toggleDetails(this)">
+                        <div class="project-preview">
+                            <h2 class="project-title" data-en="CRYPTOVAULT: A SECURE NOTES APP WITH BLOCKCHAIN AND AES-256 ENCRYPTION">
+                                    CRYPTOVAULT
+                                </h2>
+                            <div class="project-image-wrapper">
+                                <img src="images/photo7.png" alt="Supervisor Management App" class="project-image">
+                            </div>
+                            <div class="project-intro">
+                                <a href="" class="github-link" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <span class="project-technologies">
+                                    AES-256, Blockchain, React Native
+                                </span>
+                                <span class="project-technologies">
+                                    <i class="fas fa-tools"></i>
+                                    Cryptovault is a secure messaging app built for military personnel, combining AES-256 encryption and blockchain technology to ensure end-to-end message security and tamper-proof metadata tracking. It safeguards sensitive communications from interception and unauthorized changes, providing a reliable and confidential platform. Designed with user-friendly features like group messaging and real-time updates, Cryptovault meets the high security and usability standards required for military operations.
+                                </span>
+                                <span class="project-date">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span class="date-range" data-en="April 2025 - Present">April 2025 - Present</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
