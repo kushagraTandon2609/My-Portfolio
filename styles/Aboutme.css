@@ -1,0 +1,336 @@
+/* CSS file (Aboutme.css) */
+:root {
+    --primary-color: #00ff9d;
+    --bg-dark: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --hover-color: #00cc7d;
+    --glow-color: rgba(0, 255, 157, 0.3);
+    --icon-bg: #1e1e1e;
+    --nav-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    padding-top: var(--nav-height);
+}
+
+/* Sidebar and Mobile Navigation */
+.sidebar {
+    width: 250px;
+    background-color: rgba(26, 26, 26, 0.8);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    height: calc(100vh - var(--nav-height));
+    top: var(--nav-height);
+    z-index: 10;
+}
+
+.nav-item {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+/* Mobile Tab Navigation */
+.mobile-tabs {
+    display: none;
+    justify-content: center;
+    background-color: var(--card-bg);
+    margin-bottom: 1rem;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.mobile-tab {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+    flex: 1;
+}
+
+.mobile-tab:hover, .mobile-tab.active {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+/* Main Content */
+main {
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Timeline Cards */
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 255, 157, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 157, 0.1));
+    pointer-events: none;
+}
+
+.year {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #888;
+}
+
+.subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    list-style: none;
+}
+
+.subjects li {
+    background-color: rgba(0, 255, 157, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.skill-item {
+    background-color: var(--icon-bg);
+    border-radius: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 157, 0.03), transparent);
+    border-radius: inherit;
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 8px var(--glow-color));
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.skill-item:hover i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px var(--primary-color));
+}
+
+.skill-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.9;
+    text-align: center;
+    z-index: 1;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 255, 157, 0.2);
+}
+
+.bounce {
+    animation: bounce 0.5s cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    main {
+        margin-left: 200px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: calc(var(--nav-height) + 60px);
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background-color: var(--card-bg);
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .mobile-tabs {
+        display: flex;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 1rem;
+        margin-top: 60px; /* Add space for mobile tabs */
+    }
+
+    .timeline-card {
+        padding: 1.5rem;
+    }
+
+    .subjects {
+        gap: 0.5rem;
+    }
+
+    .subjects li {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .skill-item {
+        padding: 1rem;
+    }
+
+    .skill-item i {
+        font-size: 2rem;
+    }
+
+    .skill-item span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .timeline-card {
+        padding: 1rem;
+    }
+
+    .year {
+        font-size: 1.25rem;
+    }
+
+    .location {
+        font-size: 0.9rem;
+    }
+
+    .mobile-tab {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}

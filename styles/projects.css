@@ -1,0 +1,314 @@
+/* projects.css */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 0.5rem;
+        width: calc(100% - 1rem);
+    }
+}
+
+.projects-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .projects-track {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+}
+
+.project-card {
+    background: rgba(16, 185, 129, 0.05); /* Matching the green theme with transparency */
+    border: 1px solid rgba(16, 185, 129, 0.1); /* Subtle green border */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 0 0 calc(100% - 1rem);
+        min-width: calc(100% - 1rem);
+        margin: 0 auto;
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.project-header {
+    padding: 2rem;
+    cursor: pointer;
+    background: transparent;
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed to contain to show full image without cropping */
+    object-position: center; /* Center the image within the container */
+    background: #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+}
+
+.project-technologies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: #10b981; /* Updated to match the green theme */
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; /* Better mobile support */
+}
+
+.project-technologies i {
+    color: #10b981;
+}
+
+.toggle-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    color: #10b981;
+}
+
+.toggle-icon i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-header.active .toggle-icon i {
+    transform: rotate(180deg);
+}
+
+.project-details {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background: transparent;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.details-section {
+    background: rgba(16, 185, 129, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.details-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #10b981;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.details-section h3 i {
+    color: #10b981;
+}
+
+.details-section p {
+    color: #e5e7eb;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button:hover {
+    background: rgba(16, 185, 129, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-project {
+    left: 1rem;
+}
+
+.next-project {
+    right: 1rem;
+}
+
+.github-link {
+    margin-left: 10px;
+    color: #10b981;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #34d399;
+}
+
+.project-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    color: #9ca3af;
+}
+
+.project-date i {
+    color: #10b981;
+}
+
+.date-range {
+    font-weight: 500;
+    color: #e5e7eb;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.company-name {
+    display: block;
+    font-size: 0.9em;
+    color: #10b981;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    .page-container {
+        padding-top: 80px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .project-image-wrapper {
+        height: 250px;
+    }
+
+    .project-header {
+        padding: 1.5rem;
+    }
+
+    .details-section {
+        padding: 1.5rem;
+    }
+
+    .nav-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+
+    .prev-project {
+        left: 0.25rem;
+    }
+
+    .next-project {
+        right: 0.25rem;
+    }
+
+    .project-technologies {
+        font-size: 1rem;
+    }
+
+    .details-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+    .project-image-wrapper {
+        height: 200px;
+    }
+
+    .nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .prev-project {
+        left: 0.1rem;
+    }
+
+    .next-project {
+        right: 0.1rem;
+    }
+}
